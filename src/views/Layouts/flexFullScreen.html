@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>全屏布局flex</title>
+  <style>
+    html,
+    body,
+    .parent {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      color: white;
+    }
+    .parent {
+      display: flex;
+      flex-direction: column;
+    }
+    .top {
+      height: 100px;
+      background: blue;
+    }
+    .bottom {
+      height: 50px;
+      background: black;
+    }
+    .middle {
+      flex: 1;
+      display: flex;
+    }
+    .left {
+      width: 200px;
+      background: red;
+    }
+    .right {
+      flex: 1;
+      overflow: auto;
+      background: pink;
+    }
+    .right .inner {
+      min-height: 1000px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="top">
+      top
+    </div>
+    <div class="middle">
+      <div class="left">
+        left
+      </div>
+      <div class="right">
+        <div class="inner">
+          right
+          <img src="https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0f1dD0n0wRIgrbsczKDFLEg3DfkdFdWrbzlvaHnQW9MmMW4OV1k4MPVADLy5aJVT3gL7K4U26bujA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" />
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      bottom
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+   （1）原理、用法
+      原理：通过灵活使用CSS3布局利器flex中的flex属性和flex-direction属性以达到全屏布局。
+      用法：见实例。
+   （2）代码实例
+    (3)优缺点
+      缺点：兼容性差，ie9及ie9以下不兼容。
+
+ -->
+
+ <!-- 
+   全屏布局相关方案的兼容性、性能和自适应一览表
+    方案	兼容性	性能	是否自适应
+    Position	好	好	部分自适应
+    Flex	较差	差	可自适应
+    Grid	差	较好	可自适应
+  -->

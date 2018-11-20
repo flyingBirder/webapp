@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calc</title>
+	<style>
+    .container{
+      background:red;
+      width:300px;
+      padding:20px 0;/*加这个padding是为了能看到这个元素，不被box全部遮住*/
+    }
+    .box{
+      background:skyblue;
+      width:90%;          /*写给那些不支持calc()属性的浏览器*/
+      border:2px solid green;
+      padding:0 20px;
+      width:calc(100% - (20px + 2px) * 2);  /*用100%减去左右两个20px的padding和2px的border*/
+      height:200px;
+    }
+	</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
+<!-- 
+https://www.cnblogs.com/dan-dan/p/4589616.html -->

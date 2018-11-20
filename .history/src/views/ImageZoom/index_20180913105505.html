@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>图片放大镜</title>
+  <style>
+    #full-pic {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: #eee;
+    }
+
+    #full-pic>img {
+      display: block;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+    #pic-span {
+      display: none;
+      position: absolute;
+      cursor: move;
+      width: 200px;
+      height: 200px;
+      background: url(../img/pic-span.png);
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+    }
+
+    #big-pic {
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      background: white;
+      position: absolute;
+      left: 410px;
+      top: 0;
+      display: block;
+    }
+
+    #big-pic>img {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="full-pic">
+    <img src="img/full-pic-1.jpg" alt="">
+    <span id="pic-span"></span>
+    <div id="big-pic">
+      <img src="img/big-full-pic-1.jpg" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

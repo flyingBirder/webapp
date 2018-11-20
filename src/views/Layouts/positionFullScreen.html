@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+  全屏布局的特点
+  滚动条不是全局滚动条，而是出现在内容区域里，往往是主内容区域
+  浏览器变大时，撑满窗口
+ -->
+<head>
+  <meta charset="UTF-8">
+  <title>全屏布局position</title>
+  <style>
+    html,
+    body,
+    .parent {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      color: white;
+    }
+    .top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: blue;
+    }
+    .left {
+      position: absolute;
+      left: 0;
+      top: 100px;
+      bottom: 50px;
+      width: 200px;
+      background: red;
+    }
+    .right {
+      position: absolute;
+      left: 200px;
+      top: 100px;
+      bottom: 50px;
+      right: 0;
+      background: pink;
+      overflow: auto;
+    }
+    .right .inner {
+      min-height: 1000px;
+    }
+    .bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="top">
+      top
+    </div>
+    <div class="left">
+      left
+    </div>
+    <div class="right">
+      <div class="inner">
+        right
+        <img src="https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0f1dD0n0wRIgrbsczKDFLEgic14SCF66qdDiaGXibQKNvLtpePUTvTWtznKBKTXMD5ueuLKBia4yTTf6g/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" />
+        <table border="1" cellpadding="0" cellspacing="0" align="center">
+          <caption>全屏布局相关方案的兼容性、性能和自适应一览表</caption>
+          <thead>
+            <tr>
+              <th>方案</th><th>兼容性</th><th>性能</th><th>是否自适应</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Position</td><td>好</td><td>好</td><td>部分自适应</td></tr>
+            <tr><td>Flex</td><td>较差</td><td>差</td><td>可自适应</td></tr>
+            <tr><td>Grid</td><td>差</td><td>较好</td><td>可自适应</td></tr>
+          </tbody>
+        </table>
+        全屏布局相关方案的兼容性、性能和自适应一览表
+        方案	兼容性	性能	是否自适应
+        Position	好	好	部分自适应
+        Flex	较差	差	可自适应
+        Grid	差	较好	可自适应
+      </div>
+    </div>
+    <div class="bottom">
+      bottom
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- 
+    （1）原理、用法
+     原理：将上下部分固定，中间部分使用定宽+自适应+两块高度一样高。
+     用法：见实例。
+    （2）代码实例
+    （3）优缺点
+     优点：兼容性好，ie6下不支持
+ -->

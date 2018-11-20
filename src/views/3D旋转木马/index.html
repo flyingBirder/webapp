@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>carousel</title>
+</head>
+<style>
+    .stage {
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 300px;
+        perspective: 600px;
+        perspective-origin: 50%;
+    }
+    .stage div.wrap {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        position: absolute;
+    }
+    .stage div.wrap div {
+        width: 200px;
+        height: 100%;
+        background: #E00808;
+        position: absolute;
+    }
+    .stage div.wrap div:nth-child(1) {
+        background: #333;
+        transform: rotateY(0deg) translateZ(193px);
+    }
+    .stage div.wrap div:nth-child(2) {
+        background: #555;
+        transform: rotateY(60deg) translateZ(193px);
+    }
+    .stage div.wrap div:nth-child(3) {
+        background: #777;
+        transform: rotateY(120deg) translateZ(193px);
+    }
+    .stage div.wrap div:nth-child(4) {
+        background: #999;
+        transform: rotateY(180deg) translateZ(193px);
+    }
+    .stage div.wrap div:nth-child(5) {
+        background: #101010;
+        transform: rotateY(240deg) translateZ(193px);
+    }
+    .stage div.wrap div:nth-child(6) {
+        background: #001afe;
+        transform: rotateY(300deg) translateZ(193px);
+    }
+
+</style>
+<body>
+<div class="stage">
+    <div class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+</body>
+</html>

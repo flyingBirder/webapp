@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>图片放大</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .small-box {
+      width: 300px;
+      height: 300px;
+      margin-left: 100px;
+      margin-top: 100px;
+      border: 1px #ccc solid;
+      cursor: move;
+      float: left;
+      position: relative;
+    }
+
+    .small-box img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .tool {
+      width: 150px;
+      height: 150px;
+      background-color: gold;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      display: none;
+    }
+
+    .tool.active {
+      display: block;
+    }
+
+    .big-box {
+      width: 300px;
+      height: 300px;
+      border: 1px #ccc solid;
+      overflow: hidden;
+      float: left;
+      margin-top: 100px;
+      position: relative;
+      display: none;
+    }
+
+    .big-box.active {
+      display: block;
+    }
+
+    .big-box img {
+      width: 600px;
+      height: 600px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">
+      DEMO
+    </div>
+  </div>
+</body>
+
+</html>

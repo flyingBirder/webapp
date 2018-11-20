@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="114px" viewBox="0 0 1920 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="30.0817748%" x2="50%" y2="60.0991777%" id="linearGradient-1">
+            <stop stop-color="#0077FF" offset="0%"></stop>
+            <stop stop-color="#00EFFC" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 L1924,0 L1924,58 L1243.07502,58 C1234.28838,58 1225.74619,60.893174 1218.76796,66.2326151 L1164.48534,107.767385 C1157.50712,113.106826 1148.96493,116 1140.17828,116 L774.333223,116 C765.475368,116 756.868056,113.05981 749.861358,107.640605 L696.487312,66.3593954 C689.480615,60.9401897 680.873303,58 672.015448,58 L0,58 L0,0 Z" id="path-2"></path>
+    </defs>
+    <g id="01大屏-事件分布" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.80013587">
+        <g id="头部" transform="translate(-2.000000, -2.000000)">
+            <g id="Group-34">
+                <g id="Rectangle-2">
+                    <use fill="#111E3A" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <path stroke="url(#linearGradient-1)" stroke-width="1" d="M0.5,0.5 L0.5,57.5 L672.015448,57.5 C680.984026,57.5 689.698929,60.4769421 696.79321,65.9638878 L750.167257,107.245097 C757.08637,112.596563 765.586091,115.5 774.333223,115.5 L1140.17828,115.5 C1148.8551,115.5 1157.29051,112.642991 1164.1815,107.370293 L1218.46412,65.8355228 C1225.52957,60.4293386 1234.17854,57.5 1243.07502,57.5 L1923.5,57.5 L1923.5,0.5 L0.5,0.5 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

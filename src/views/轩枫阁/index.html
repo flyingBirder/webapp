@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩枫阁</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: #f1f1ef;
+            overflow-y: hidden;
+            margin: 0;
+        }
+        h1{
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+
+        }
+        .header{
+            width: 100%;
+            height: 74px;
+            position: relative;
+            box-shadow: 0 4px 4px rgba(0,0,0,.2);
+            background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#d4d7db));
+        }
+        .header-progress{
+            width: 100%;
+            height: 2px;
+            background: #29d;
+            -webkit-animation: hue 20s infinite linear;
+        }
+        .header-wrap{
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header-logo{
+            float: left;
+            position: relative;
+            width: 140px;
+            height: 60px;
+            text-indent: -999em;
+            background-image: url(img.png);
+            background-position: -4px -4px;
+            background-repeat: no-repeat;
+        }
+        .header-nav{
+            float: right;
+            width: 810px;
+            height: 70px;
+            overflow: hidden;
+        }
+        .header-nav li{
+            float: left;
+            width: 90px;
+            position: relative;
+            display: inline-block;
+            -webkit-transition: all .2s cubic-bezier(.4,0,1,1);
+            transition: all .2s cubic-bezier(.4,0,1,1);
+        }
+        .header-nav li a{
+            position: relative;
+            color: #333;
+            text-decoration: none;
+            text-align: center;
+            line-height: 70px;
+            font-family: Microsoft YaHei;
+            font-size: 14px;
+            display: block;
+            z-index: 100;
+        }
+        .header-nav li:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            top: 66px;
+            -webkit-transition: .2s all ease-in-out;
+            transition: .2s all ease-in-out;
+        }
+        .menu li:nth-child(1):after{
+            background: #b9d329;
+        }
+        .menu li:nth-child(2):after {
+            background: #c0ebf7;
+        }
+        .menu li:nth-child(3):after {
+            background: #b9d329;
+        }
+        .menu li:nth-child(4):after {
+            background: #69bcf3;
+        }
+        .menu li:nth-child(5):after {
+            background: #79d9f3;
+        }
+        .menu li:nth-child(6):after {
+            background: #ffae5b;
+        }
+        .menu li:nth-child(7):after {
+            background: #acd180;
+        }
+        .menu li:nth-child(8):after {
+            background: #fab4cc;
+        }
+        .header-musicIcon{
+            position: absolute;
+            right: -40px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .header-musicIcon i{
+            width: 2px;
+            height: 15px;
+            position: absolute;
+            bottom: 8px;
+            background-color: #666;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+        }
+        .header-musicIcon i:nth-of-type(1) {
+            left: 0;
+            display: none;
+        }
+        .header-musicIcon i:nth-of-type(2) {
+            left: 6px;
+            -webkit-transform: rotate(22.5deg);
+            transform: rotate(22.5deg);
+            -webkit-transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
+            transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
+        }
+        .header-musicIcon i:nth-of-type(3) {
+            left: 12px;
+            -webkit-transform: rotate(-22.5deg);
+            transform: rotate(-22.5deg);
+            -webkit-transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
+            transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
+        }
+        .header-musicIcon i:nth-of-type(4) {
+            left: 18px;
+            -webkit-transform: rotate(22.5deg);
+            transform: rotate(22.5deg);
+            -webkit-transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
+            transform: rotate(rotate(22.5deg)) scale(1) skew(1deg) translate(10px);
+        }
+        .header-musicIcon i:nth-of-type(5) {
+            left: 24px;
+            -webkit-transform: rotate(-22.5deg);
+            transform: rotate(-22.5deg);
+            -webkit-transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
+            transform: rotate(rotate(-22.5deg)) scale(1) skew(1deg) translate(10px);
+        }
+        .banner {
+            position: relative;
+            width: 100%;
+            max-height: 300px;
+            margin-top: 10px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #fff;
+        }
+        .banner-img{
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .banner-tool>span{
+            margin-top: 0;
+            -webkit-transition: none!important;
+            transition: none!important;
+        }
+        .banner-tool .banner-tool-prev {
+            left: 0;
+            top: 50%;
+            margin-top: -25px;
+            background-color: #27cfc3;
+            background-image: url(img.png);
+            background-position: -328px -18px;
+            z-index: 2;
+            width: 56px;
+            height: 56px;
+        }
+        .banner-tool .banner-tool-next {
+            right: 0;
+            top: 50%;
+            margin-top: -25px;
+            background-color: #27cfc3;
+            background-image: url(img.png);
+            background-position: -148px -18px;
+            z-index: 2;
+            width: 56px;
+            height: 56px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-progress"></div>
+    <div class="header-wrap">
+        <h1 class="header-logo"></h1>
+        <div class="header-nav">
+            <ul class="menu">
+                <li><a href="###">首页</a></li>
+                <li><a href="###">移动前端</a></li>
+                <li><a href="###">web前端</a></li>
+                <li><a href="###">授人以鱼</a></li>
+                <li><a href="###">UI设计</a></li>
+                <li><a href="###">WP视点</a></li>
+                <li><a href="###">程序人生</a></li>
+                <li><a href="###">关于&留言</a></li>
+            </ul>
+        </div>
+        <div class="header-musicIcon" title="钢琴节奏">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+</header>
+<section class="banner">
+    <a href="" class="banner-img"></a>
+    <div class="banner-tool">
+        <span class="banner-tool-prev"></span>
+        <span class="banner-tool-next"></span>
+    </div>
+</section>
+
+</body>
+</html>
